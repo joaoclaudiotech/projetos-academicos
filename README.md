@@ -60,4 +60,3 @@ As atividades partem de kits e roteiros fornecidos pelas disciplinas. Cada pasta
 **João Cláudio** — estudante de Tecnologia (IA e Ciência da Computação)
 
 - GitHub: [@joaoclaudiotech](https://github.com/joaoclaudiotech)
-- Prática complementar de Python: [projetos-python](https://github.com/joaoclaudiotech/projetos-python)
