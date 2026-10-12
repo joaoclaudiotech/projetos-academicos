@@ -1,0 +1,53 @@
+
+# Dockerfile.multistage
+# Versão multi-stage: separa compilação de dependências e runtime.
+
+# Stage 1: builder com imagem completa.
+FROM python:3.11 AS builder
+
+# Pasta temporária de build.
+WORKDIR /build
+
+# Copia lista de dependências.
+COPY requirements.txt .
+
+# Gera wheels das dependências.
+RUN pip install --no-cache-dir wheel && \
+    pip wheel --no-cache-dir --wheel-dir /wheels -r requirements.txt
+
+
+# Stage 2: runtime enxuto.
+FROM python:3.11-slim
+
+# Evita .pyc e mantém logs sem buffer.
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Pasta da aplicação.
+WORKDIR /app
+
+# Copia wheels compilados do builder.
+COPY --from=builder /wheels /wheels
+
+# Copia requirements para instalar a partir dos wheels.
+COPY requirements.txt .
+
+# Instala dependências sem internet, usando apenas os wheels locais.
+RUN pip install --no-cache-dir --no-index --find-links=/wheels -r requirements.txt && \
+    rm -rf /wheels
+
+# Copia código e modelo.
+COPY src/ ./src/
+COPY models/ ./models/
+
+# Cria usuário não-root.
+RUN useradd --create-home --shell /bin/bash appuser
+
+# Usa usuário não-root.
+USER appuser
+
+# Expõe porta da API.
+EXPOSE 8000
+
+# Inicia aplicação.
+CMD ["uvicorn", "src.serve:app", "--host", "0.0.0.0", "--port", "8000"]

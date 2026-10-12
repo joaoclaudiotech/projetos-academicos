@@ -1,0 +1,30 @@
+
+# Ambiente virtual local.
+.venv/
+venv/
+
+# Cache Python.
+__pycache__/
+*.pyc
+
+# Dados de treino não entram na imagem.
+data/
+*.csv
+*.parquet
+
+# Notebooks de experimentação.
+notebooks/
+
+# Git/IDE.
+.git/
+.gitignore
+.vscode/
+
+# Segredos.
+.env
+*.env
+
+# Artefatos locais de MLflow.
+mlruns/
+mlartifacts/
+mlflow.db
