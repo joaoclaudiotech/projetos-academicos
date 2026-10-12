@@ -1,0 +1,80 @@
+MLOps · Semana 10 — RELATÓRIO DE VALIDAÇÃO
+Gerado em 2026-10-06
+
+ARTEFATOS
+- Professor: 15 slides, HTML autossuficiente/offline.
+- Aluno: 13 etapas, ~100 min, HTML autossuficiente/offline.
+- Kit: Windows + VS Code + PowerShell, prática principal sem dependência obrigatória de Docker.
+
+CORREÇÕES TÉCNICAS FEITAS SOBRE O MATERIAL-BASE
+- Substituído padrão BentoML legado (Runner / bentoml.Service / @svc.api) pelo padrão atual class-based: @bentoml.service e @bentoml.api.
+- Adaptive batching configurado no endpoint via @bentoml.api(batchable=True, max_batch_size=..., max_latency_ms=...).
+- Ambiente de build descrito via bentoml.images.Image no service.py; bentofile.yaml não é necessário para esta prática.
+- Benchmark não depende de hey/Go/Bash: usa Python, httpx e SyncHTTPClient.
+- Docker virou extensão opcional; não bloqueia a conclusão da atividade.
+- Triton foi apresentado com a ressalva correta de backends/formatos: um .pkl sklearn genérico não entra diretamente só por ser sklearn.
+
+TESTES EXECUTADOS NESTE AMBIENTE
+1) python -m compileall -q .
+   RESULTADO: PASS
+
+2) python 01_treinar_modelo.py
+   RESULTADO: PASS
+   Dataset sintético: 800 linhas
+   Features: idade, meses_cliente, chamados_suporte, dias_sem_login, valor_mensal
+   Accuracy teste: 0.8800
+   F1 teste: 0.8462
+   Artefatos gerados: models/churn_model.joblib e models/metadata.json
+
+3) pytest -q tests
+   RESULTADO: 7 passed
+   Cobertura didática:
+   - contrato de 5 features e rejeição de entrada incorreta;
+   - geração e leitura dos artefatos do modelo;
+   - predição individual e em lote;
+   - lote vazio rejeitado;
+   - FastAPI /health e /predict via TestClient;
+   - entrada FastAPI inválida retorna 422;
+   - service.py usa API BentoML moderna e não usa Runner legado;
+   - métodos do Service exercitados com stub de framework, carregando o modelo real.
+
+4) HTML do professor
+   RESULTADO: PASS
+   - 15 slides detectados;
+   - 15 itens de navegação;
+   - JavaScript validado com node --check;
+   - sem referências HTTP/HTTPS externas;
+   - teste headless: Próximo mudou 1/15 -> 2/15;
+   - simulador de batching reagiu a concorrência 20, limitando batch a 16.
+
+5) HTML do aluno
+   RESULTADO: PASS
+   - 13 etapas detectadas;
+   - 13 itens de navegação;
+   - JavaScript validado com node --check;
+   - sem referências HTTP/HTTPS externas;
+   - teste headless: marcar etapa alterou progresso de 0/13 para 1/13;
+   - campo Nome aceitou entrada corretamente.
+
+VERIFICAÇÃO CONTRA DOCUMENTAÇÃO ATUAL
+- BentoML 1.4.39 é a release atual encontrada no PyPI em 2026-10-06.
+- Documentação atual confirma Service baseado em classe, @bentoml.api, bentoml serve, bentoml build e bentoml containerize.
+- Documentação atual confirma adaptive batching por @bentoml.api(batchable=True, max_batch_size, max_latency_ms).
+
+LIMITAÇÃO DO AMBIENTE DE TESTE
+- BentoML não está pré-instalado neste sandbox e o acesso de rede do pip está indisponível aqui.
+- Docker também não está disponível neste sandbox.
+- Portanto, os comandos externos bentoml serve/build/containerize e o benchmark contra um servidor BentoML real NÃO puderam ser executados end-to-end neste ambiente.
+- Para reduzir o risco em sala, o kit fixa BentoML==1.4.39, usa a API documentada oficialmente, contém 00_preflight.py, 03_validar_servico.py (5 verificações contra o servidor real) e TROUBLESHOOTING.md. Docker não é caminho crítico.
+
+CHECK FINAL DE DISTRIBUIÇÃO
+- O ZIP final é montado sem o modelo treinado, para o aluno executar a etapa de treino.
+- O ZIP é extraído novamente em pasta limpa e a suíte local é executada nessa cópia antes da entrega.
+
+RESULTADO DO CHECK FINAL DE DISTRIBUIÇÃO
+- unzip -t: PASS, nenhum erro no arquivo compactado.
+- ZIP extraído em diretório novo: PASS.
+- Estado inicial confirmado sem churn_model.joblib/metadata.json: PASS.
+- python -m compileall -q . na cópia extraída: PASS.
+- pytest -q tests na cópia extraída: 7 passed.
+- O treino iniciado pelos testes na cópia extraída reproduziu Accuracy 0.88 e F1 0.8462.

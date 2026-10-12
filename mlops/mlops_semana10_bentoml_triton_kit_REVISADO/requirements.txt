@@ -1,0 +1,8 @@
+bentoml==1.4.39
+scikit-learn==1.9.1
+numpy==2.5.3
+fastapi==0.142.2
+uvicorn==0.54.0
+httpx>=0.28,<0.29
+joblib>=1.5,<2
+pytest>=8,<9
