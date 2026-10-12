@@ -1,0 +1,21 @@
+# Dados e saídas geradas localmente (Big Data)
+data/
+output/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+
+# Editores
+.idea/
+.vscode/
+
+# Spark (arquivos que podem aparecer localmente)
+spark-warehouse/
+metastore_db/
+derby.log
