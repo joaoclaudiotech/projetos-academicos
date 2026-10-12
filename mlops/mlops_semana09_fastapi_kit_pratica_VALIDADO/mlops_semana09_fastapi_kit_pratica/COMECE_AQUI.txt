@@ -1,0 +1,13 @@
+MLOps Semana 09 — COMECE AQUI
+
+1. Abra ESTA PASTA no Visual Studio Code.
+2. Leia o Caderno do Aluno HTML fornecido junto com o kit.
+3. No VS Code: Terminal > New Terminal.
+4. Crie e ative .venv.
+5. Instale requirements.txt.
+6. Rode: python scripts\train_model.py
+7. Terminal 1: python -m uvicorn app.main:app --reload --port 8000
+8. Navegador: http://127.0.0.1:8000/docs
+9. Terminal 2: python scripts\validar_entrega.py
+
+Não use o terminal da API para digitar outros comandos enquanto o servidor estiver ativo.

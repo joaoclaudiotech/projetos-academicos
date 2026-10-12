@@ -1,0 +1,41 @@
+{
+  "predict_valido": {
+    "idade": 35,
+    "meses_cliente": 24,
+    "chamados_suporte": 3,
+    "dias_sem_login": 12,
+    "valor_mensal": 159.9
+  },
+  "predict_invalido_422": {
+    "idade": 5,
+    "meses_cliente": 24,
+    "chamados_suporte": 3,
+    "dias_sem_login": 12,
+    "valor_mensal": 159.9
+  },
+  "batch_3": {
+    "instancias": [
+      {
+        "idade": 35,
+        "meses_cliente": 24,
+        "chamados_suporte": 3,
+        "dias_sem_login": 12,
+        "valor_mensal": 159.9
+      },
+      {
+        "idade": 44,
+        "meses_cliente": 12,
+        "chamados_suporte": 8,
+        "dias_sem_login": 45,
+        "valor_mensal": 390.0
+      },
+      {
+        "idade": 52,
+        "meses_cliente": 80,
+        "chamados_suporte": 0,
+        "dias_sem_login": 2,
+        "valor_mensal": 89.0
+      }
+    ]
+  }
+}

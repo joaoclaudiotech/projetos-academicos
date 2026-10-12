@@ -1,0 +1,16 @@
+VALIDAÇÃO DO KIT — MLOps Semana 09
+
+Checagens executadas durante a preparação:
+- scripts Python compilam sem erro de sintaxe;
+- treino gera models/model.json;
+- Uvicorn inicia a aplicação;
+- GET /health -> 200;
+- GET /model/info -> 200;
+- POST /predict válido -> 200;
+- POST /predict inválido (idade 5) -> 422;
+- POST /predict/batch com 3 instâncias -> 3 resultados;
+- GET /metrics -> contadores atualizados;
+- /openapi.json contém os 5 endpoints-base;
+- scripts/validar_entrega.py -> 7/7 PASS.
+
+O ZIP é distribuído SEM o model.json pronto para que o aluno execute a etapa de treino.

@@ -1,0 +1,25 @@
+{
+  "model_type": "logistic_regression_didatica",
+  "version": "1.0.0",
+  "feature_names": [
+    "idade",
+    "meses_cliente",
+    "chamados_suporte",
+    "dias_sem_login",
+    "valor_mensal"
+  ],
+  "weights": [
+    -0.00890103,
+    -0.01269908,
+    0.37725881,
+    0.03750416,
+    0.00222109
+  ],
+  "bias": -1.64206343,
+  "threshold": 0.5,
+  "metrics": {
+    "accuracy_sintetica": 0.7857,
+    "n_train": 336,
+    "n_test": 84
+  }
+}
