@@ -12,16 +12,17 @@ Mantenho este diretório para registrar, de forma reproduzível, o que aprendo e
 
 | Semana | Atividade | Tema central | Tecnologias |
 |:---:|---|---|---|
-| 08 | [Docker para ML](mlops/mlops_semana08_docker_kit_pratica_REVISADO) | Empacotar um modelo e sua API de inferência em container | Python, FastAPI, Docker, Docker Compose |
-| 09 | [FastAPI para serving](mlops/mlops_semana09_fastapi_kit_pratica_VALIDADO) | API de inferência com validação de contrato e testes automatizados | Python, FastAPI, Pydantic, Uvicorn |
-| 10 | [BentoML + Triton](mlops/mlops_semana10_bentoml_triton_kit_REVISADO) | Serving com BentoML, benchmark contra FastAPI e adaptive batching | Python, BentoML, scikit-learn, FastAPI |
+| 08 | [Docker para ML](./mlops/semana-08-docker-para-ml) | Empacotar um modelo e sua API de inferência em container | Python, FastAPI, Docker, Docker Compose |
+| 09 | [FastAPI para serving](./mlops/semana-09-fastapi-serving) | API de inferência com validação de contrato e testes automatizados | Python, FastAPI, Pydantic, Uvicorn |
+| 10 | [BentoML + Triton](./mlops/semana-10-bentoml-triton) | Serving com BentoML, benchmark contra FastAPI e adaptive batching | Python, BentoML, scikit-learn, FastAPI |
 
 ### Big Data
 
 | Semana | Atividade | Tema central | Tecnologias |
 |:---:|---|---|---|
-| 09 | [PySpark Avançado](bigdata/aluno_projeto_pyspark_semana09) | Diagnosticar e otimizar um pipeline lento com `explain()` e Spark UI | Python, PySpark, Parquet, Spark UI |
-| 10 | [Spark SQL e Otimização](bigdata/aluno_projeto_bigdata_semana10) | Catalyst, leitura de planos, broadcast e cache | Python, PySpark, Spark SQL, Parquet |
+| 09 | [PySpark Avançado](./bigdata/semana-09-pyspark-avancado) | Diagnosticar e otimizar um pipeline lento com `explain()` e Spark UI | Python, PySpark, Parquet, Spark UI |
+| 10 | [Spark SQL e Otimização](./bigdata/semana-10-spark-sql-otimizacao) | Catalyst, leitura de planos, broadcast e cache | Python, PySpark, Spark SQL, Parquet |
+| 11 | [dbt: Staging e Testes](./bigdata/semana-11-dbt-staging-testes) | ELT com dbt: camada de staging, testes de dados e DAG | Python, dbt, DuckDB, SQL |
 
 > Novas atividades e disciplinas serão adicionadas aqui à medida que forem concluídas.
 
@@ -52,6 +53,7 @@ As atividades partem de kits e roteiros fornecidos pelas disciplinas. Cada pasta
 - Python com ambientes virtuais (`.venv`) por atividade
 - Docker Desktop (quando a atividade exige)
 - Java 17+ e PySpark 4.2.0 (atividades de Big Data)
+- dbt e DuckDB (Big Data, semana 11)
 
 ---
 
