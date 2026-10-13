@@ -19,3 +19,11 @@ env/
 spark-warehouse/
 metastore_db/
 derby.log
+
+# dbt / DuckDB (semana 11)
+target/
+logs/
+dbt_packages/
+.user.yml
+*.duckdb
+*.duckdb.wal
