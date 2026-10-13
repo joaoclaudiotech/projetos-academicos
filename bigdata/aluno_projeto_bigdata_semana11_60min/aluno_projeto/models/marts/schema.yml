@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: fct_revenue_daily
+    description: "Receita diária apenas de pedidos pagos"
+    columns:
+      - name: order_date
+        data_tests: [not_null, unique]
+      - name: receita_total
+        data_tests: [not_null]

@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    description: "Tabelas brutas geradas para a prática da Semana 11"
+    tables:
+      - name: orders
+      - name: customers
+      - name: products

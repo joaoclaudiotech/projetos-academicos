@@ -1,0 +1,8 @@
+bigdata_semana11:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: semana11.duckdb
+      schema: analytics
+      threads: 2
