@@ -1,0 +1,19 @@
+SEMANA 11 — MLOps — MONITORAMENTO EM PRODUÇÃO E DATA DRIFT
+
+1) Extraia o ZIP.
+2) Abra a pasta extraída inteira no VS Code.
+3) Abra CADERNO_ALUNO_SEMANA11.html no navegador.
+4) Siga o caderno na ordem.
+
+PowerShell inicial:
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python 00_preflight.py
+
+Se o PowerShell bloquear a ativação:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+
+Não pule o preflight e não execute os arquivos dentro do ZIP.
