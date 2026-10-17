@@ -27,3 +27,7 @@ dbt_packages/
 .user.yml
 *.duckdb
 *.duckdb.wal
+
+# MLOps semana 11 (gerados pelos scripts)
+reports/
+evidencias/
