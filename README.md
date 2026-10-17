@@ -12,18 +12,18 @@ Mantenho este diretório para registrar, de forma reproduzível, o que aprendo e
 
 | Semana | Atividade | Tema central | Tecnologias |
 |:---:|---|---|---|
-| 08 | [Docker para ML](mlops_semana08_docker_kit_pratica_REVISADO) | Empacotar um modelo e sua API de inferência em container | Python, FastAPI, Docker, Docker Compose |
-| 09 | [FastAPI para serving](mlops_semana09_fastapi_kit_pratica_VALIDADO) | API de inferência com validação de contrato e testes automatizados | Python, FastAPI, Pydantic, Uvicorn |
-| 10 | [BentoML + Triton](mlops_semana_10_bentoml_triton_kit_REVISADO) | Serving com BentoML, benchmark contra FastAPI e adaptive batching | Python, BentoML, scikit-learn, FastAPI |
-| 11 | [Monitoramento e Data Drift](mlops_semana_11_drift_kit_VALIDADO) | Detectar drift com KS, PSI, qui-quadrado e Evidently, e registrar o histórico das execuções | Python, pandas, SciPy, Evidently, pytest |
+| 08 | [Docker para ML](./mlops/mlops_semana08) | Empacotar um modelo e sua API de inferência em container | Python, FastAPI, Docker, Docker Compose |
+| 09 | [FastAPI para serving](./mlops/mlops_semana09) | API de inferência com validação de contrato e testes automatizados | Python, FastAPI, Pydantic, Uvicorn |
+| 10 | [BentoML + Triton](./mlops/mlops_semana10) | Serving com BentoML, benchmark contra FastAPI e adaptive batching | Python, BentoML, scikit-learn, FastAPI |
+| 11 | [Monitoramento e Data Drift](./mlops/mlops_semana11) | Detectar drift com KS, PSI, qui-quadrado e Evidently, e registrar o histórico das execuções | Python, pandas, SciPy, Evidently, pytest |
 
 ### Big Data
 
 | Semana | Atividade | Tema central | Tecnologias |
 |:---:|---|---|---|
-| 09 | [PySpark Avançado](aluno_projeto_pyspark_semana09) | Diagnosticar e otimizar um pipeline lento com `explain()` e Spark UI | Python, PySpark, Parquet, Spark UI |
-| 10 | [Spark SQL e Otimização](aluno_projeto_bigdata_semana10) | Catalyst, leitura de planos, broadcast e cache | Python, PySpark, Spark SQL, Parquet |
-| 11 | [dbt: Staging e Testes](aluno_projeto_bigdata_semana11_60min) | ELT com dbt: camada de staging, testes de dados e DAG | Python, dbt, DuckDB, SQL |
+| 09 | [PySpark Avançado](./bigdata/bigdata_semana09) | Diagnosticar e otimizar um pipeline lento com `explain()` e Spark UI | Python, PySpark, Parquet, Spark UI |
+| 10 | [Spark SQL e Otimização](./bigdata/bigdata_semana10) | Catalyst, leitura de planos, broadcast e cache | Python, PySpark, Spark SQL, Parquet |
+| 11 | [dbt: Staging e Testes](./bigdata/bigdata_semana11) | ELT com dbt: camada de staging, testes de dados e DAG | Python, dbt, DuckDB, SQL |
 
 > Novas atividades e disciplinas serão adicionadas aqui à medida que forem concluídas.
 
