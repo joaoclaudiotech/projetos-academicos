@@ -1,6 +1,6 @@
 # 🎓 Projetos Acadêmicos
 
-Atividades práticas desenvolvidas durante minha graduação em **Inteligência Artificial e Ciência da Computação**, documentadas com objetivo, passo a passo, conceitos aplicados e evidências de execução.
+Atividades práticas desenvolvidas durante minha graduação em **Inteligência Artificial e Ciência da Computação**, documentadas com objetivo, passo a passo, conceitos aplicados e problemas comuns.
 
 Mantenho este diretório para registrar, de forma reproduzível, o que aprendo em sala de aula e para acompanhar minha evolução ao longo do curso.
 
@@ -24,6 +24,7 @@ Mantenho este diretório para registrar, de forma reproduzível, o que aprendo e
 | 09 | [PySpark Avançado](./bigdata/bigdata_semana09) | Diagnosticar e otimizar um pipeline lento com `explain()` e Spark UI | Python, PySpark, Parquet, Spark UI |
 | 10 | [Spark SQL e Otimização](./bigdata/bigdata_semana10) | Catalyst, leitura de planos, broadcast e cache | Python, PySpark, Spark SQL, Parquet |
 | 11 | [dbt: Staging e Testes](./bigdata/bigdata_semana11) | ELT com dbt: camada de staging, testes de dados e DAG | Python, dbt, DuckDB, SQL |
+| 12 | [Apache Airflow](./bigdata/bigdata_semana12) | Orquestração de pipelines: DAG, retries, sensor e testes automatizados | Python, Apache Airflow 3 (DAG), unittest |
 
 > Novas atividades e disciplinas serão adicionadas aqui à medida que forem concluídas.
 
@@ -62,5 +63,5 @@ As atividades partem de kits e roteiros fornecidos pelas disciplinas. Cada pasta
 
 **João Cláudio** — estudante de Tecnologia (IA e Ciência da Computação)
 
-- GitHub: [@joaoclaudiotech](https://github.com/joaoclaudiotech)
+ GitHub: [@joaoclaudiotech](https://github.com/joaoclaudiotech)
 - Prática complementar de Python: [projetos-python](https://github.com/joaoclaudiotech/projetos-python)
