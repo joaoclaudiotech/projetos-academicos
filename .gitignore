@@ -31,3 +31,6 @@ dbt_packages/
 # MLOps semana 11 (gerados pelos scripts)
 reports/
 evidencias/
+
+# Airflow (semana 12): resultados das execuções
+saida/
